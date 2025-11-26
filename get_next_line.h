@@ -6,7 +6,7 @@
 /*   By: fcaval <fcaval@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 11:06:16 by fcaval            #+#    #+#             */
-/*   Updated: 2025/11/26 14:56:23 by fcaval           ###   ########.fr       */
+/*   Updated: 2025/11/26 17:43:49 by fcaval           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ char	*save_this_please(char *save);
 char	*get_next_line(int fd);
 int		ft_strglen(const char *s);
 char	*ft_strgchr(const char *s, int c);
-char	*ft_strgjoin(char *save, char *buffer);
+// char	*ft_strgjoin(char *save, char *buffer);
+char	*ft_strgjoin(char *s1, char *s2);
 
 #endif

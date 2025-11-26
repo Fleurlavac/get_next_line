@@ -6,7 +6,7 @@
 /*   By: fcaval <fcaval@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 15:25:29 by fcaval            #+#    #+#             */
-/*   Updated: 2025/11/26 14:57:28 by fcaval           ###   ########.fr       */
+/*   Updated: 2025/11/26 18:03:21 by fcaval           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,10 @@ char	*save_this_please(char *save)
 		return (free(save), NULL);
 	new_save = malloc(sizeof(char) * (ft_strglen(save) - i + 1));
 	if (!new_save)
+	{
+		free(new_save);
 		return (free(save), NULL);
+	}
 	i++;
 	while (save[i])
 		new_save[j++] = save[i++];
@@ -119,9 +122,17 @@ char	*get_next_line(int fd)
 // 	while (i < lines)
 // 	{
 // 		t = get_next_line(fd);
+// 		if(!t)
+// 			break ;
 // 		printf("%s", t);
 // 		free(t);
 // 		i++;
 // 	}
+// 	while (t)
+// 	{
+// 		t = get_next_line(fd);
+// 		free(t);
+// 	}
 // 	close(fd);
+// 	return(0);
 // }
